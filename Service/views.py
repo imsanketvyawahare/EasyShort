@@ -17,7 +17,7 @@ def done(request):
             data.short_code = short_code
             data.website = website
             data.save()
-            value = "http://127.0.0.1:8000/"+data.short_code
+            value = "https://abtohogahi.herokuapp.com/"+data.short_code
             return render(request, 'done.html', {"data": value})
         except IntegrityError:
             return render(request, 'not-found.html', {"message": "The Short Name You Tried is already in Use.\n Please try another one."})
