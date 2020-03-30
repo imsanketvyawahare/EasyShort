@@ -1,0 +1,27 @@
+h1{
+    background-color: #c2185b;
+    margin-top: -1px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+#buttons{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+#buttons button {
+    margin: 0px 20px;
+}
+label {
+    color: black;
+    font-size: 18px;
+}
+
+h2,h3{
+    color: #c2185b;
+}
+h3{
+    margin-bottom: 150px;
+}

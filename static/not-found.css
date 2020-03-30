@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+}
+h1{
+    background-color: #c2185b;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+h2{
+    color: #c2185b;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+h3{
+    color: #c2185b;
+    margin-bottom: 150px;
+}
+p{
+    color: #c2185b;
+    font-size: 30px;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}

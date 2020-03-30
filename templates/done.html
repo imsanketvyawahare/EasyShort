@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your link is ready!!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {% load static %}
+    <link href="{% static 'done.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <h1>EASY SHORTNER</h1>
+    <div class="container center-align" >
+        <h2>Your Url is ready!!!</h2>
+        <h3>Thank you for using Easy Short</h3>
+    </div>
+    <div class="container center-align">
+        <div class="container center-align">
+    <input type="text" value="{{ data }}" id="myInput" style="font-size: 20px; ">
+        </div>
+    <button onclick="myFunction()" class="pad btn-large pink darken-1 z-depth-3 waves-effect waves-light">Copy text</button>
+    <a class="center-align btn-large pink pad darken-1 z-depth-3 waves-effect waves-light " href="{% url 'home' %}">Back to Home</a>
+
+    </div>
+
+
+
+    <script>
+    function myFunction() {
+        const copyText = document.getElementById("myInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+        document.execCommand("copy");
+    }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>

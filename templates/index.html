@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Easy Shortner- Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Easy Shortner</h1>
+    <h2 class="center-align">Want to send some big website link ??</h2>
+    <h3 class="center-align">Use Easy short, and cut it down!!</h3>
+    <div class="container">
+        <div class="container">
+        <form method="post" action="{% url 'done' %}">
+            {% csrf_token %}
+            <label for="url">WEBSITE LINK :
+            <input type="url" name="website" required>
+            </label>
+            <br>
+            <label for="code">SHORT CODE :
+            <input type="text" name="short-code" required>
+            </label>
+            <br>
+            <div id="buttons">
+            <button type="submit" class="btn-large pink darken-1 z-depth-3 waves-effect waves-light">Submit</button>
+            <button type="reset"  class="btn-large pink darken-1 z-depth-3 waves-effect waves-light">Reset</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
